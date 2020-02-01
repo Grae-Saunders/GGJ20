@@ -13,11 +13,29 @@ public class PlayerEnvironmentInteraction : MonoBehaviour
     
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (CrossPlatformInputManager.GetButtonDown("J1Interact"))
+        var interaction = "J1Interact";
+        if (gameObject.tag == "Player2")
+            interaction = "J2Interact";
+        if (CrossPlatformInputManager.GetButtonDown(interaction))
         {
+            if (gameObject.tag == "Player1" && gameManager.subController.playerControlling == SubStandardAssets.PlayerControlling.Player1)
+            {
+                playerControls.LockMovement = false;
+                gameManager.subController.SetPlayerController(0);
+                return;
+            }
+            if (gameObject.tag == "Player2" && gameManager.subController.playerControlling == SubStandardAssets.PlayerControlling.Player2)
+            {
+                playerControls.LockMovement = false;
+                gameManager.subController.SetPlayerController(0);
+
+                return;
+            }
             if (collision.tag == "Fixable")
             {
                 collision.GetComponent<ProblemControl>().FixProblem();
+                return;
+
             }
             if (collision.tag == "PilotSeat" )
             {
@@ -31,11 +49,7 @@ public class PlayerEnvironmentInteraction : MonoBehaviour
                         gameManager.subController.SetPlayerController(2);
 
                 }
-                else
-                {
-                    playerControls.LockMovement = false;
-                    gameManager.subController.SetPlayerController(0);
-                }
+                return;
 
             }
             if (collision.tag == "FuelPickup")
@@ -43,6 +57,8 @@ public class PlayerEnvironmentInteraction : MonoBehaviour
                 // if empty hands then switch to having fuel
                 if (!playerStats.hasFuel)
                     playerStats.hasFuel = true;
+                return;
+
             }
             if (collision.tag == "FuelDelivery")
             {
@@ -53,7 +69,10 @@ public class PlayerEnvironmentInteraction : MonoBehaviour
                     gameManager.subController.AddFuel();
 
                 }
-            } 
+                return;
+
+            }
+
         }
     }
 }

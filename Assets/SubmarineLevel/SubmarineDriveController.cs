@@ -36,18 +36,18 @@ namespace SubStandardAssets
             float h, j;
             if (playerControlling == PlayerControlling.Player1)
             {
-                h = Mathf.Clamp01(CrossPlatformInputManager.GetAxis("Player1Horizontal"));
-                j = CrossPlatformInputManager.GetAxis("Player1Vertical"); 
+                h = Mathf.Clamp01(CrossPlatformInputManager.GetAxis("J1Horizontal"));
+                j = CrossPlatformInputManager.GetAxis("J1Vertical"); 
             }
             else
             {
-                h = Mathf.Clamp01(CrossPlatformInputManager.GetAxis("Player2Horizontal"));
-                j = CrossPlatformInputManager.GetAxis("Player2Vertical");
+                h = Mathf.Clamp01(CrossPlatformInputManager.GetAxis("J2Horizontal"));
+                j = CrossPlatformInputManager.GetAxis("J2Vertical");
             }
 
-            transform.rotation = Quaternion.Euler(0, 1, j);
+            transform.rotation = Quaternion.Euler(0, 1, -j*5);
 
-            SubmarineRigidbody.velocity = new Vector2(h, j) * SubSpeed;
+            SubmarineRigidbody.velocity = new Vector2(h, -j) * SubSpeed;
         }
 
         public void AddFuel()

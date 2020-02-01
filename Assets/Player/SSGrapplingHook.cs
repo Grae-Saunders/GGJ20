@@ -12,6 +12,8 @@ public class SSGrapplingHook : MonoBehaviour
     public float MaxGraplingRetractSpeed;
     public float GrappleProximity = 0.2f;
 
+    public Transform grappleLaunch;
+
     public LayerMask GroundLayer;
 
     public GameObject GrapplingHook;
@@ -40,10 +42,13 @@ public class SSGrapplingHook : MonoBehaviour
 
     void Update()
     {
-        if (!grappleShot && CrossPlatformInputManager.GetButtonDown("J1Fire1"))
+        var button = "J1Fire1";
+        if (gameObject.tag == "Player2")
+            button = "J2Fire1";
+        if (!grappleShot && CrossPlatformInputManager.GetButtonDown(button))
         {
             grappleShot = true;
-            GrapplingHook.transform.position = transform.position;
+            GrapplingHook.transform.position = grappleLaunch.position;
             GrapplingHook.SetActive(true);
             launchDirection = (transform.localScale.x > 0 ? Vector3.right : Vector3.left) + Vector3.up;
         }
@@ -57,6 +62,7 @@ public class SSGrapplingHook : MonoBehaviour
             }
             if (Physics2D.OverlapCircle(GrapplingHook.transform.position, GrappleProximity, GroundLayer))
             {
+                Debug.Log("Hit");
                 grappleHit = true;
                 moveController.LockMovement = true;
                 hingeSwing.enabled = true;
@@ -69,7 +75,7 @@ public class SSGrapplingHook : MonoBehaviour
         }
         if (grappleHit)
         {
-            if (CrossPlatformInputManager.GetButtonDown("J1Fire1"))
+            if (CrossPlatformInputManager.GetButtonDown(button))
             {
                 DespawnHook();
             }
@@ -96,7 +102,7 @@ public class SSGrapplingHook : MonoBehaviour
     }
     private void UpdateTetherPosition()
     {
-        GrappleTether.SetPosition(0, transform.position);
+        GrappleTether.SetPosition(0, grappleLaunch.position);
         GrappleTether.SetPosition(1, GrapplingHook.transform.position);
     }
 }

@@ -26,7 +26,7 @@ namespace UnityStandardAssets._2D
                     
                     m_Jump = CrossPlatformInputManager.GetButtonDown("J1Jump");
 
-                    Debug.Log($"P1 {m_Jump}");
+
                 }
                 if (gameObject.tag == "Player2")
                 {

@@ -12,7 +12,7 @@ namespace UnityStandardAssets._2D
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
-        const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+        const float k_GroundedRadius = .08f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
@@ -69,7 +69,6 @@ namespace UnityStandardAssets._2D
             // #### DO WE NEED TO CROUCH?
             // Set whether or not the character is crouching in the animator
             //m_Anim.SetBool("Crouch", crouch);
-
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
