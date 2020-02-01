@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject Player1Controller;
+    public Transform respawnLocation;
 
-    // Update is called once per frame
-    void Update()
+
+    public void RespawnPlayer(GameObject playerToRespawn)
     {
-        
+        playerToRespawn.transform.position = respawnLocation.position;
     }
 }

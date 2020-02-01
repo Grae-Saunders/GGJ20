@@ -19,8 +19,9 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-        
+
         public bool LockMovement;
+        public Rigidbody2D submarineRB;
 
         private void Awake()
         {
@@ -77,9 +78,9 @@ namespace UnityStandardAssets._2D
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
-                var moveSpeed =  m_MaxSpeed;
+                var moveSpeed = m_MaxSpeed;
                 // Move the character
-                m_Rigidbody2D.velocity = new Vector2(move * moveSpeed, m_Rigidbody2D.velocity.y);
+                m_Rigidbody2D.velocity = new Vector2((move * moveSpeed) + submarineRB.velocity.x, m_Rigidbody2D.velocity.y) ;
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !m_FacingRight)
