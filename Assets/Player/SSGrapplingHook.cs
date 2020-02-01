@@ -40,7 +40,7 @@ public class SSGrapplingHook : MonoBehaviour
 
     void Update()
     {
-        if (!grappleShot && CrossPlatformInputManager.GetButtonDown("Fire1"))
+        if (!grappleShot && CrossPlatformInputManager.GetButtonDown("J1Fire1"))
         {
             grappleShot = true;
             GrapplingHook.transform.position = transform.position;
@@ -69,7 +69,7 @@ public class SSGrapplingHook : MonoBehaviour
         }
         if (grappleHit)
         {
-            if (CrossPlatformInputManager.GetButtonDown("Fire1"))
+            if (CrossPlatformInputManager.GetButtonDown("J1Fire1"))
             {
                 DespawnHook();
             }

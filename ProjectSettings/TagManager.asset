@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fixable
+  - PilotSeat
+  - FuelPickup
+  - FuelDelivery
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

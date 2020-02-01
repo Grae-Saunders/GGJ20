@@ -1,0 +1,8 @@
+{2dbec313-f71d-4f6a-b0ff-0201bc0be6f3} bank:/Master
+{b5a3e3c7-8666-0328-36b6-88ff4df8e06b} bank:/Master.strings
+{f0237efa-ffa1-40bd-9831-7fd9e783c4aa} bus:/
+{eb7115e8-035e-42e2-9e7f-cd0c3f0553aa} bus:/Reverb
+{0ed246a2-8f41-4d14-9193-25d259a87c91} parameter:/Broken
+{78dc21d8-e35f-4b8a-8208-814ca8100f72} parameter:/Rooms
+{233372e8-8c24-441c-9565-5f600332f787} parameter:/SPEED
+{3f06883b-950f-48e8-bc87-c49e4b578865} parameter:/State
