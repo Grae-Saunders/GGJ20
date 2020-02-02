@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets._2D;
+using FMODUnity;
 
 
 public class PlayerEnvironmentInteraction : MonoBehaviour
@@ -72,7 +73,11 @@ public class PlayerEnvironmentInteraction : MonoBehaviour
                 {
                     // if empty hands then switch to having fuel
                     if (!playerStats.hasFuel)
+                    {
                         playerStats.hasFuel = true;
+                        collider.gameObject.GetComponent<StudioEventEmitter>().Play();
+
+                    }
                     return;
 
                 }
@@ -83,6 +88,7 @@ public class PlayerEnvironmentInteraction : MonoBehaviour
                     {
                         playerStats.hasFuel = false;
                         gameManager.subController.AddFuel();
+                        collider.gameObject.GetComponent<StudioEventEmitter>().Play();
 
                     }
                     return;

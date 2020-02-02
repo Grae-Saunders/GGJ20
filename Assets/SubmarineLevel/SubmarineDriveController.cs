@@ -19,6 +19,8 @@ namespace SubStandardAssets
 
         public PlayerControlling playerControlling;
 
+        public float subLevelingOut = 2.5f;
+
         void Awake()
         {
             SubmarineRigidbody = GetComponent<Rigidbody2D>();
@@ -47,7 +49,7 @@ namespace SubStandardAssets
                 j = CrossPlatformInputManager.GetAxis("J2Vertical");
             }
 
-            transform.rotation = Quaternion.Euler(0, 1, -j*5);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 1, -j*5),Time.deltaTime * subLevelingOut);
 
             SubmarineRigidbody.velocity = new Vector2(h, -j) * SubSpeed;
         }

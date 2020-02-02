@@ -2,23 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ProblemControl : MonoBehaviour
 {
-    public Light roomLight;
+    //public Light roomLight;
+    public GameObject goodLight;
+    public GameObject badLight;
     public ParticleSystem particles;
 
     public AudioController audioController;
-
-    public Color goodLight;
-    public Color badLight;
-
+    
     public bool isTriggered;
 
     public RoomName thisRoom;
 
+    private void Start()
+    {
+        goodLight.SetActive(true);
+        badLight.SetActive(false);
+    }
+
     public void TriggerProblem()
     {
-        roomLight.color = badLight;
+        isTriggered = true;
+        //roomLight.color = badLight;
+        goodLight.SetActive(false);
+        badLight.SetActive(true);
         if (particles != null)
             particles.Play();
 
@@ -49,7 +58,10 @@ public class ProblemControl : MonoBehaviour
     }
     public void FixProblem()
     {
-        roomLight.color = goodLight;
+        isTriggered = false;
+
+        goodLight.SetActive(true);
+        badLight.SetActive(false);
 
         switch (thisRoom)
         {

@@ -18,11 +18,14 @@ public class ProblemSpawner : MonoBehaviour
 
     float currentTimeToNextTrigger;
     float currentTime;
-        
+
+
+    public float timeToEnd;
+
     public void Start()
     {
         randLocation = new System.Random(1); //add seed here
-        RandomiseProblems();
+        //RandomiseProblems();
         currentTimeToNextTrigger = Random.Range(approxTimeToNextTrigger - randomTimeVariation, approxTimeToNextTrigger + randomTimeVariation);
     }
 
@@ -31,6 +34,8 @@ public class ProblemSpawner : MonoBehaviour
         if (currentTime > currentTimeToNextTrigger)
             TriggerProblem();
         currentTime += Time.deltaTime;
+
+        IncrementLoseCondition();
     }
 
 
@@ -47,8 +52,14 @@ public class ProblemSpawner : MonoBehaviour
     }
 
 
-    private void RandomiseProblems()
+    private void IncrementLoseCondition()
     {
+        foreach (var prob in ProblemLocations)
+        {
+            if (prob.isTriggered)
+                timeToEnd += Time.deltaTime;
+        }
+
         //var tempList = new List<Transform>(ProblemLocations);
         //ProblemLocations.Clear();
         //while (tempList.Count > 0)
