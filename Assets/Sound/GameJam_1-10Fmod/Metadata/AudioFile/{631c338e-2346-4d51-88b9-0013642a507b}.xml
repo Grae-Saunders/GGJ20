@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{631c338e-2346-4d51-88b9-0013642a507b}">
+        <property name="assetPath">
+            <value>Submarine_Ambience_ControlRoom.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.5</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{076b6467-1e81-450f-899f-4f02a0e5c357}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{3a645af0-844a-4460-8b75-caaf5e6fb110}">
+        <property name="assetPath">
+            <value>ITEM_Fuel_Release.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.375</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{076b6467-1e81-450f-899f-4f02a0e5c357}</destination>
+        </relationship>
+    </object>
+</objects>

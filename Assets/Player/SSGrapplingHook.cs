@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets._2D;
 using UnityStandardAssets.CrossPlatformInput;
+using FMODUnity;
 
 
 public class SSGrapplingHook : MonoBehaviour
@@ -11,6 +12,7 @@ public class SSGrapplingHook : MonoBehaviour
     public float MaxGraplingShootSpeed;
     public float MaxGraplingRetractSpeed;
     public float GrappleProximity = 0.2f;
+    public float MinimumDistanceFromGrapple = 0.2f;
 
     public Transform grappleLaunch;
 
@@ -28,6 +30,8 @@ public class SSGrapplingHook : MonoBehaviour
 
     Vector3 launchDirection;
 
+    StudioEventEmitter grapplingSounds;
+
     void Awake()
     {
         grappleHit = false;
@@ -38,6 +42,7 @@ public class SSGrapplingHook : MonoBehaviour
         hingeSwing = GrapplingHook.GetComponent<HingeJoint2D>();
         hingeSwing.enabled = false;
         playerRigidbody = GetComponent<Rigidbody2D>();
+        grapplingSounds = GetComponent<StudioEventEmitter>();
     }
 
     void Update()
@@ -51,6 +56,8 @@ public class SSGrapplingHook : MonoBehaviour
             GrapplingHook.transform.position = grappleLaunch.position;
             GrapplingHook.SetActive(true);
             launchDirection = (transform.localScale.x > 0 ? Vector3.right : Vector3.left) + Vector3.up;
+            grapplingSounds.SetParameter("State",2);
+            grapplingSounds.Play();
         }
         if (grappleShot && !grappleHit)
         {
@@ -62,15 +69,17 @@ public class SSGrapplingHook : MonoBehaviour
             }
             if (Physics2D.OverlapCircle(GrapplingHook.transform.position, GrappleProximity, GroundLayer))
             {
-                Debug.Log("Hit");
+
                 grappleHit = true;
                 moveController.LockMovement = true;
                 hingeSwing.enabled = true;
 
                 hingeSwing.connectedBody = playerRigidbody;
                 playerRigidbody.constraints = RigidbodyConstraints2D.None;
+
+
             }
-            
+
             UpdateTetherPosition();
         }
         if (grappleHit)
@@ -79,7 +88,10 @@ public class SSGrapplingHook : MonoBehaviour
             {
                 DespawnHook();
             }
-            transform.position = Vector2.MoveTowards(transform.position, GrapplingHook.transform.position, MaxGraplingRetractSpeed);
+
+            if (Vector2.Distance(grappleLaunch.position, GrapplingHook.transform.position) > MinimumDistanceFromGrapple)
+                transform.position = Vector2.MoveTowards(transform.position, GrapplingHook.transform.position, MaxGraplingRetractSpeed);
+
 
             UpdateTetherPosition();
         }

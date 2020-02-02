@@ -1,0 +1,12 @@
+{01ad3147-919e-40c4-a646-2ba78549ca6a} event:/Ambience Music/AMB Control rm
+{a7b68dea-191b-4684-95c3-71fe9e5ef845} event:/Ambience Music/AMB Engine
+{54b31aae-9d2f-4dd6-bfd2-5fbb52881ed1} event:/Ambience Music/AMB Fuel
+{3c287905-81ee-4abc-a91b-4031051d6b98} event:/Ambience Music/AMB Sonar
+{9ddec972-f7b1-40c4-b185-acef2531f0fe} event:/Character/Plunger
+{b6b46b69-f761-4d37-86e7-7c252c5699d0} event:/Items/Fuel Dispenser
+{3b124fc4-d7e0-48cb-8f16-6f373012f851} event:/UI/Enter
+{5d5d5123-dcb3-4a22-8dc5-5d474e1cffd6} event:/UI/Menu Ambience
+{1f4b12ae-699c-46cd-91ca-5d51920c98ff} event:/Ambience BG
+{6d8546f6-de59-4611-b7d6-e01203592726} bus:/
+{310186f9-d12c-4050-967d-ad1af1cc0c34} bus:/Reverb
+{b82d1bfd-fa92-4dec-9cdf-af98aa2ad815} bank:/Master Bank

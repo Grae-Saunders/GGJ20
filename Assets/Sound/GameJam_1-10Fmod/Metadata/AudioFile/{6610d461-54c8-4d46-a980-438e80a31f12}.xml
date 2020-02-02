@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{6610d461-54c8-4d46-a980-438e80a31f12}">
+        <property name="assetPath">
+            <value>Steering Wheel Broken.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>1.5</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{076b6467-1e81-450f-899f-4f02a0e5c357}</destination>
+        </relationship>
+    </object>
+</objects>

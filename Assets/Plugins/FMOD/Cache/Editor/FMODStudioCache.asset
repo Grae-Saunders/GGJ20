@@ -1,5 +1,81 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8735516053424025982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fuel Dispenser/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-8047133385238776515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637161877883480904
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7611014118715359074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience Music/AMB Control rm
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience Music/AMB Control rm
+  guid: 4731ad019e91c440a6462ba78549ca6a
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2438570004918240421}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7534663334245639462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Plunger/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-7091713220518390788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,6 +94,87 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-6968975628912412054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Fuel/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-6693732096696696697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Plunger
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Plunger
+  guid: 72c9de9db1f7c440b185acef2531f0fe
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1639778881427290189}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6692226386956298093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Sonar/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-6583179420948745322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Plunger
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Plunger
+  guid: 72c9de9db1f7c440b185acef2531f0fe
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1230343034523138496}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-6428781598550934839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,6 +195,68 @@ MonoBehaviour:
   - Name: 
     Value: 1000
   Exists: 1
+--- !u!114 &-5655907207053256156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience BG
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience BG
+  guid: ae124b1f9c69cd4691ca5d51920c98ff
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 7500
+--- !u!114 &-5429691927857106118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Fuel/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &-4434870718098898864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Menu Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Menu Ambience
+  guid: 23515d5db3dc224a8dc55d474e1cffd6
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
 --- !u!114 &-4299695425610630778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,7 +274,7 @@ MonoBehaviour:
   lastModified: 637161877883480904
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3981971027490503868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +293,30 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-3416704979738354012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience Music/AMB Fuel
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience Music/AMB Fuel
+  guid: ae1ab3542f9dd64dbfd25fbb52881ed1
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 830061257077169681}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-3328454015922731031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +336,23 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 866
+  Exists: 1
+--- !u!114 &-2438570004918240421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Control rm/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
   Exists: 1
 --- !u!114 &-2039048209571307080
 MonoBehaviour:
@@ -114,6 +374,82 @@ MonoBehaviour:
   - Name: 
     Value: 866
   Exists: 1
+--- !u!114 &-1300037980736583501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Sonar/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &-911362779296130064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Sonar/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &-875063043940298626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/GameJam_1-10Fmod/Build/Desktop/Master Bank.strings.bank
+  SubDir: 
+  lastModified: 637161931440000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1074
+  Exists: 0
+--- !u!114 &-348672405835639137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Enter
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Enter
+  guid: c44f123be0d7cb488f166f373012f851
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,16 +463,182 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 7210324578852013011}
-  - {fileID: -4299695425610630778}
-  EditorEvents: []
+  - {fileID: 7000920453317981930}
+  - {fileID: 7284361844457107676}
+  EditorEvents:
+  - {fileID: 6575283800096689853}
+  - {fileID: 7087977057016034868}
+  - {fileID: -7611014118715359074}
+  - {fileID: 8545826015350372211}
+  - {fileID: -6693732096696696697}
+  - {fileID: -5655907207053256156}
+  - {fileID: -3416704979738354012}
+  - {fileID: 2230225014541415625}
+  - {fileID: 2244534499369210938}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4299695425610630778}
+  - {fileID: 7284361844457107676}
   StringsBanks:
-  - {fileID: 7210324578852013011}
-  stringsBankWriteTime: 637161877883490903
+  - {fileID: 7000920453317981930}
+  stringsBankWriteTime: 637162329460000000
   cacheVersion: 3
+--- !u!114 &635814672562348968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/GameJam_1-10Fmod/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637161931440000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &830061257077169681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Fuel/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &1108423079259436530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience Music/AMB Sonar
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience Music/AMB Sonar
+  guid: 0579283cee81bc4aa91b4031051d6b98
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -911362779296130064}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1230343034523138496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Plunger/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &1639778881427290189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Plunger/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &1721090960731215557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637161877883490903
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2230225014541415625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Enter
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Enter
+  guid: c44f123be0d7cb488f166f373012f851
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+--- !u!114 &2244534499369210938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience Music/AMB Engine
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience Music/AMB Engine
+  guid: ea8db6a71b19844695c371fe9e5ef845
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8302663609272777492}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2276440588693270620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +657,114 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &2599006982823522991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience BG
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience BG
+  guid: ae124b1f9c69cd4691ca5d51920c98ff
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 7500
+--- !u!114 &2616486390788713326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Sonar/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &2620686071137759003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Plunger/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &2731262316056250866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Control rm/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &2738253978161200533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/GameJam_1-10Fmod/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637161931440000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2953564241022615476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Engine/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &3412391563495890058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +785,23 @@ MonoBehaviour:
   - Name: 
     Value: 866
   Exists: 1
+--- !u!114 &3559860435884892081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Fuel/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &3898584099815886125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +822,139 @@ MonoBehaviour:
   - Name: 
     Value: 866
   Exists: 0
+--- !u!114 &4030814660015507196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/GameJam_1-10Fmod/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637162285480000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &4363960792045458774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fuel Dispenser/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &5862983687175218385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience Music/AMB Control rm
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience Music/AMB Control rm
+  guid: 4731ad019e91c440a6462ba78549ca6a
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2731262316056250866}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6067367480900791694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Control rm/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &6152559647237203530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Control rm/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &6203281815744373001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fuel Dispenser/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &6575283800096689853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience Music/AMB Sonar
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience Music/AMB Sonar
+  guid: 0579283cee81bc4aa91b4031051d6b98
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1300037980736583501}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6773518037532034785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +975,49 @@ MonoBehaviour:
   - Name: 
     Value: 866
   Exists: 1
+--- !u!114 &7000920453317981930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/GameJam_1-10Fmod/Build/Desktop/Master Bank.strings.bank
+  SubDir: 
+  lastModified: 637162329460000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1110
+  Exists: 1
+--- !u!114 &7087977057016034868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Menu Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Menu Ambience
+  guid: 23515d5db3dc224a8dc55d474e1cffd6
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
 --- !u!114 &7210324578852013011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +1035,65 @@ MonoBehaviour:
   lastModified: 637161877883490903
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &7284361844457107676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/GameJam_1-10Fmod/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637162329460000000
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
+--- !u!114 &7371265752419563760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fuel Dispenser/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &7465044413246380902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Items/Fuel Dispenser
+  m_EditorClassIdentifier: 
+  Path: event:/Items/Fuel Dispenser
+  guid: 696bb4b661f7374d86e77c252c5699d0
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6203281815744373001}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7786792178360315936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +1112,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7972727902808268047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience Music/AMB Fuel
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience Music/AMB Fuel
+  guid: ae1ab3542f9dd64dbfd25fbb52881ed1
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5429691927857106118}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8216378354644077287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,3 +1153,44 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &8302663609272777492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB Engine/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &8545826015350372211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Items/Fuel Dispenser
+  m_EditorClassIdentifier: 
+  Path: event:/Items/Fuel Dispenser
+  guid: 696bb4b661f7374d86e77c252c5699d0
+  Banks:
+  - {fileID: 7284361844457107676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7371265752419563760}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0

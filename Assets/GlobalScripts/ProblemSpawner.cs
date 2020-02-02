@@ -7,6 +7,8 @@ public class ProblemSpawner : MonoBehaviour
     public GameObject ProblemPrefab;
     public List<ProblemControl> ProblemLocations;
 
+    public AudioController audioController;
+
     private System.Random randLocation;
 
     int currentProblem;

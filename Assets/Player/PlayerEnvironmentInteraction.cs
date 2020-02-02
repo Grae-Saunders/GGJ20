@@ -10,8 +10,20 @@ public class PlayerEnvironmentInteraction : MonoBehaviour
     public PlayerStats playerStats;
     public GameManager gameManager;
     public PlatformerCharacter2D playerControls;
-    
-    public void OnTriggerStay2D(Collider2D collision)
+    bool CanTrigger;
+    Collider2D collider;
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        CanTrigger = true;
+        collider = collision;
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        CanTrigger = false;
+        collider = null;
+    }
+    private void Update()
     {
         var interaction = "J1Interact";
         if (gameObject.tag == "Player2")
@@ -31,46 +43,51 @@ public class PlayerEnvironmentInteraction : MonoBehaviour
 
                 return;
             }
-            if (collision.tag == "Fixable")
-            {
-                collision.GetComponent<ProblemControl>().FixProblem();
-                return;
 
-            }
-            if (collision.tag == "PilotSeat" )
+            if (CanTrigger)
             {
-                // Switch to ship pilot mode
-                if (gameManager.subController.playerControlling == SubStandardAssets.PlayerControlling.None)
+
+                if (collider.tag == "Fixable")
                 {
-                    playerControls.LockMovement = true;
-                    if (gameObject.tag == "Player1")
-                        gameManager.subController.SetPlayerController(1);
-                    else
-                        gameManager.subController.SetPlayerController(2);
+                    collider.GetComponent<ProblemControl>().FixProblem();
+                    return;
 
                 }
-                return;
-
-            }
-            if (collision.tag == "FuelPickup")
-            {
-                // if empty hands then switch to having fuel
-                if (!playerStats.hasFuel)
-                    playerStats.hasFuel = true;
-                return;
-
-            }
-            if (collision.tag == "FuelDelivery")
-            {
-                // if has fuel drop and increment fuel drop fuel
-                if (playerStats.hasFuel)
+                if (collider.tag == "PilotSeat")
                 {
-                    playerStats.hasFuel = false;
-                    gameManager.subController.AddFuel();
+                    // Switch to ship pilot mode
+                    if (gameManager.subController.playerControlling == SubStandardAssets.PlayerControlling.None)
+                    {
+                        playerControls.LockMovement = true;
+                        if (gameObject.tag == "Player1")
+                            gameManager.subController.SetPlayerController(1);
+                        else
+                            gameManager.subController.SetPlayerController(2);
+
+                    }
+                    return;
 
                 }
-                return;
+                if (collider.tag == "FuelPickup")
+                {
+                    // if empty hands then switch to having fuel
+                    if (!playerStats.hasFuel)
+                        playerStats.hasFuel = true;
+                    return;
 
+                }
+                if (collider.tag == "FuelDelivery")
+                {
+                    // if has fuel drop and increment fuel drop fuel
+                    if (playerStats.hasFuel)
+                    {
+                        playerStats.hasFuel = false;
+                        gameManager.subController.AddFuel();
+
+                    }
+                    return;
+
+                } 
             }
 
         }

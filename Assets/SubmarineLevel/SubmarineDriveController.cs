@@ -15,6 +15,7 @@ namespace SubStandardAssets
         public float fuelAmount;
         public float maxFuel;
         public float refuelAmount;
+        public float fuelConsumptiopnRate;
 
         public PlayerControlling playerControlling;
 
@@ -29,6 +30,7 @@ namespace SubStandardAssets
             if (fuelAmount <= 0)
                 return;
             MoveSubmarine();
+            FuelConsumption();
         }
 
         void MoveSubmarine()
@@ -48,6 +50,12 @@ namespace SubStandardAssets
             transform.rotation = Quaternion.Euler(0, 1, -j*5);
 
             SubmarineRigidbody.velocity = new Vector2(h, -j) * SubSpeed;
+        }
+        void FuelConsumption()
+        {
+            fuelAmount -= Time.deltaTime * fuelConsumptiopnRate;
+            if (fuelAmount < 0)
+                fuelAmount = 0;
         }
 
         public void AddFuel()
